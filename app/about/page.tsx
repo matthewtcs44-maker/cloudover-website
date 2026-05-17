@@ -24,7 +24,7 @@ export default function AboutPage() {
       <header className="text-center py-24 mb-16 border-b-4 border-teal-500/50 shadow-inner">
         <h1 className="text-5xl font-extrabold mb-4 text-white drop-shadow-lg">Who We Are</h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-          We're CloudOver. We make technology work for business, turning complex digital challenges into clear pathways to growth and efficiency.
+          We&apos;re CloudOver. We make technology work for business, turning complex digital challenges into clear pathways to growth and efficiency.
         </p>
          {/* CTA */}
         <Link href="/services/smb-digital-services" className="inline-block bg-teal-500 text-[#0A1F44] font-bold py-3 px-8 rounded-full hover:bg-teal-600 transition shadow-xl">

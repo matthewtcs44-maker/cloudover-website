@@ -72,7 +72,7 @@ export default function ContactPage() {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message*</label>
-              <textarea id="message" name="message" rows="5" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#1A6BFF] focus:border-[#1A6BFF]" placeholder="Tell us about your project..."></textarea>
+              <textarea id="message" name="message" rows={5} required className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#1A6BFF] focus:border-[#1A6BFF]" placeholder="Tell us about your project..."></textarea>
             </div>
 
              {/* Privacy Consent Checkbox */}
