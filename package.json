@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf pages .next && next build",
+    "build": "next build",
     "start": "next start",
     "test": "vitest"
   },
