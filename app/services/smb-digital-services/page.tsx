@@ -1,5 +1,15 @@
 // app/services/smb-digital-services/page.tsx
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'SMB Digital Services | CloudOver',
+  description: 'Affordable AI-enhanced digital services for small and medium businesses — website design, AI integration, e-commerce, SEO, and more.',
+  openGraph: {
+    title: 'SMB Digital Services | CloudOver',
+    description: 'Affordable AI-enhanced digital services for small and medium businesses.',
+  },
+}
 
 const services = [
   { name: "Website Design", priceHint: "£2k+", description: "Modern, responsive websites built to capture leads and tell your brand story." },
@@ -10,9 +20,19 @@ const services = [
   { name: "Hosting & Support", priceHint: "£50/mo+", description: "Reliable, secure cloud hosting and 24/7 technical support for seamless operation." },
 ];
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'SMB Digital Services',
+  provider: { '@type': 'Organization', name: 'CloudOver' },
+  description: 'Affordable AI-enhanced digital services for small and medium businesses including website design, AI integration, e-commerce, SEO, and hosting.',
+  areaServed: 'GB',
+}
+
 export default function SmbDigitalServicesPage() {
   return (
     <main className="min-h-screen bg-gray-100 p-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero Section */}
       <header className="text-center py-24 mb-16 bg-[#EBF0FF] rounded-xl shadow-inner border-b-4 border-[#1A6BFF]">
         <h1 className="text-5xl font-extrabold text-gray-900 mb-4">Power Up Your Business with Digital Services</h1>

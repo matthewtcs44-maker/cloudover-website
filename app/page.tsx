@@ -1,4 +1,14 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'CloudOver | AI & Digital Transformation Partner',
+  description: 'AI-first digital services for SMB and Enterprise clients. Transforming businesses with technology.',
+  openGraph: {
+    title: 'CloudOver | AI & Digital Transformation Partner',
+    description: 'AI-first digital services for SMB and Enterprise clients.',
+  },
+}
 
 export default function HomePage() {
   return (

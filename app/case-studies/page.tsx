@@ -1,5 +1,15 @@
 // app/case-studies/page.tsx
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Case Studies | CloudOver',
+  description: 'See how CloudOver has transformed businesses with AI integration, e-commerce, and enterprise solutions.',
+  openGraph: {
+    title: 'Case Studies | CloudOver',
+    description: 'Real results from CloudOver\'s digital transformation projects.',
+  },
+}
 
 export default function CaseStudiesPage() {
   return (

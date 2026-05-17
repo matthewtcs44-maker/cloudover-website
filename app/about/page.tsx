@@ -1,5 +1,15 @@
 // app/about/page.tsx
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'About CloudOver | Our Mission & Team',
+  description: 'Meet the team behind CloudOver — AI-first consultants helping SMB and Enterprise clients grow through technology.',
+  openGraph: {
+    title: 'About CloudOver | Our Mission & Team',
+    description: 'Meet the CloudOver team — AI-first digital transformation consultants.',
+  },
+}
 
 const values = [
   { name: "AI-First", description: "Integrating intelligence into every process to drive smarter, faster business outcomes." },

@@ -1,5 +1,15 @@
 // app/contact/page.tsx
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Contact CloudOver | Get a Free Consultation',
+  description: 'Ready to transform your business? Contact the CloudOver team for a free consultation on digital services and AI integration.',
+  openGraph: {
+    title: 'Contact CloudOver | Get a Free Consultation',
+    description: 'Get in touch with CloudOver for a free digital transformation consultation.',
+  },
+}
 
 export default function ContactPage() {
   return (

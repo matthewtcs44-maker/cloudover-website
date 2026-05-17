@@ -1,5 +1,15 @@
 // app/services/enterprise-solutions/page.tsx
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Enterprise Solutions | CloudOver',
+  description: 'Strategic Microsoft Power Platform, process automation, and digital transformation solutions for enterprise organisations.',
+  openGraph: {
+    title: 'Enterprise Solutions | CloudOver',
+    description: 'Strategic Power Platform and digital transformation solutions for enterprise.',
+  },
+}
 
 const enterpriseServices = [
   { name: "Power Platform Architecture", description: "Designing robust, scalable Power Platform solutions aligned with your business goals." },
@@ -10,9 +20,19 @@ const enterpriseServices = [
   { name: "Training & Enablement", description: "Empowering your teams with the necessary skills to leverage new digital investments effectively." },
 ];
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Enterprise Solutions',
+  provider: { '@type': 'Organization', name: 'CloudOver' },
+  description: 'Strategic Microsoft Power Platform, process automation, business intelligence, and digital transformation solutions for enterprise organisations.',
+  areaServed: 'GB',
+}
+
 export default function EnterpriseSolutionsPage() {
   return (
     <main className="min-h-screen bg-[#0A1F44] p-8 text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero Section */}
       <header className="text-center py-24 mb-16 border-b-4 border-teal-500/50 shadow-inner">
         <h1 className="text-5xl font-extrabold mb-4 text-white drop-shadow-lg">Enterprise Solutions Consulting</h1>
